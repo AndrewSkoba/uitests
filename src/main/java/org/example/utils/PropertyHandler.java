@@ -12,6 +12,7 @@ public class PropertyHandler {
         properties = new Properties();
 
         String rootPath = Thread.currentThread().getContextClassLoader().getResource(resourceName).getPath();
+        System.out.println("resourceName: " + resourceName + "; Property path: " + rootPath);
         try {
             properties.load(new FileInputStream(rootPath));
         } catch (IOException e) {
